@@ -8,7 +8,7 @@ import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props) => {
     console.log("член")
-    const a = 15
+    const b = 15;
     return (
         <div className='app-wrapper'>
             <Header/>
