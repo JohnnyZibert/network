@@ -3,23 +3,25 @@ import './App.css';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
-import { Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props) => {
+    console.log("член")
+    const a = 15
     return (
-            <div className='app-wrapper'>
-                <Header />
-                <Navbar />
-                <div className='app-wrapper-content'>
-                    <Route path='/dialogs'
-                           render={ () => <DialogsContainer store={props.store} /> }/>
+        <div className='app-wrapper'>
+            <Header/>
+            <Navbar/>
+            <div className='app-wrapper-content'>
+                <Route path='/dialogs'
+                       render={() => <DialogsContainer store={props.store}/>}/>
 
-                    <Route path='/profile'
-                           render={ () => <Profile store={props.store} /> }/>
-                </div>
+                <Route path='/profile'
+                       render={() => <Profile store={props.store}/>}/>
             </div>
-        )
+        </div>
+    )
 }
 
 export default App;
