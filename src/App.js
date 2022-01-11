@@ -7,8 +7,6 @@ import { Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props) => {
-    console.log("123")
-
     return (
             <div className='app-wrapper'>
                 <Header />
