@@ -6,19 +6,20 @@ import {Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import ContainerProfile from "./components/Profile/ProfileContainer";
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 
 const App = () => {
 
     return (
         <div className='app-wrapper'>
-            <Header/>
+            <HeaderContainer/>
             <Navbar/>
             <div className='app-wrapper-content'>
                 <Route path='/dialogs'
                        render={() => <DialogsContainer />}/>
 
-                <Route path='/profile'
+                <Route path='/profile/:userId'
                        render={() => <ContainerProfile />}/>
 
                 <Route path='/users'
