@@ -1,5 +1,5 @@
-import preloader from '../../assets/images/Skateboarding.gif'
 import React from "react";
+const preloader = require("../../")
 
 const Preloader = (props) => {
 return <div>
