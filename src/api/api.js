@@ -18,13 +18,26 @@ export const usersAPI = {
             })
     },
     getProfile(userId) {
-        return instance.get(`profile/` + userId)
+        console.warn('Obsolete method.Please profileApi object.')
+        return profileAPI.getProfile(`profile/` + userId)
     },
     unfollow(userId) {
         return instance.delete(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`)
     },
     follow(userId) {
         return instance.post(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`, {})
+    }
+}
+
+export const profileAPI = {
+    getProfile(userId) {
+        return instance.get(`profile/` + userId)
+    },
+    getStatus(userId) {
+        return instance.get(`profile/status/` + userId)
+    },
+    updateStatus(status) {
+        return instance.put(`profile/status/`, {status: status} );
     }
 }
 
